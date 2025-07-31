@@ -115,7 +115,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" alt="Click Code Logo" className="w-10 h-10 object-contain" />
+              
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Click Code</span>
             </div>
             <div className="flex items-center space-x-4 md:space-x-6">
