@@ -274,7 +274,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Oliveta Restaurant */}
-            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer" onClick={() => window.location.href = '/menu/oliveta'}>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <img 
@@ -296,14 +296,18 @@ const Index = () => {
                   ))}
                 </div>
                 
-                <blockquote className="text-slate-600 italic leading-relaxed">
+                <blockquote className="text-slate-600 italic leading-relaxed mb-6">
                   "Our partnership with this platform has transformed how we present our authentic Greek dishes. The beautiful menu design perfectly captures the essence of our modern cuisine, and our customers love the seamless digital experience."
                 </blockquote>
+                
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg group-hover:scale-105 transition-transform">
+                  View Menu <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </CardContent>
             </Card>
 
             {/* Iumentis Steakhouse */}
-            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer" onClick={() => window.location.href = '/menu/iumentis'}>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <img 
@@ -325,14 +329,18 @@ const Index = () => {
                   ))}
                 </div>
                 
-                <blockquote className="text-slate-600 italic leading-relaxed">
+                <blockquote className="text-slate-600 italic leading-relaxed mb-6">
                   "The sophisticated menu presentation has elevated our steakhouse brand. Our premium cuts and wine selection are now showcased beautifully, resulting in a 40% increase in online orders and improved customer engagement."
                 </blockquote>
+                
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg group-hover:scale-105 transition-transform">
+                  View Menu <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </CardContent>
             </Card>
 
             {/* Omoi Restaurant */}
-            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer" onClick={() => window.location.href = '/menu/omoi'}>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <img 
@@ -354,9 +362,13 @@ const Index = () => {
                   ))}
                 </div>
                 
-                <blockquote className="text-slate-600 italic leading-relaxed">
+                <blockquote className="text-slate-600 italic leading-relaxed mb-6">
                   "The elegant design system perfectly matches our restaurant's aesthetic. Our guests appreciate the intuitive menu navigation and the seamless ordering experience. It's been a game-changer for our business."
                 </blockquote>
+                
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg group-hover:scale-105 transition-transform">
+                  View Menu <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </CardContent>
             </Card>
           </div>
