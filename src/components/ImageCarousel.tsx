@@ -149,28 +149,20 @@ export const ImageCarousel = ({ mobileImages, desktopImages }: ImageCarouselProp
 
       {/* Image Modal */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-4xl w-full h-[80vh] p-0 bg-black/90 border-0">
+        <DialogContent className="max-w-4xl w-full h-[80vh] p-0 bg-white border-0">
           <div className="relative w-full h-full flex items-center justify-center">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-50 bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+              className="absolute top-4 right-4 z-50 bg-black/10 hover:bg-black/20 rounded-full p-2 transition-colors"
             >
-              <X className="h-6 w-6 text-white" />
+              <X className="h-6 w-6 text-black" />
             </button>
             {selectedImage && (
-              <div className="w-full h-full flex flex-col items-center justify-center p-8">
-                <img
-                  src={selectedImage.src}
-                  alt={selectedImage.title}
-                  className="max-w-full max-h-[calc(100%-80px)] object-contain rounded-lg"
-                />
-                <div className="mt-4 text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">{selectedImage.title}</h3>
-                  {selectedImage.description && (
-                    <p className="text-gray-300">{selectedImage.description}</p>
-                  )}
-                </div>
-              </div>
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.title}
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
             )}
           </div>
         </DialogContent>
