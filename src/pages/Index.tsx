@@ -4,137 +4,118 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Zap, Shield, Cpu, Sparkles, ChevronDown, Monitor, Smartphone, Settings, BarChart3 } from 'lucide-react';
 import { ImageCarousel } from '@/components/ImageCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-
 const Index = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  });
   useEffect(() => {
     const updateMousePosition = (ev: MouseEvent) => {
-      setMousePosition({ x: ev.clientX, y: ev.clientY });
+      setMousePosition({
+        x: ev.clientX,
+        y: ev.clientY
+      });
     };
-
     window.addEventListener('mousemove', updateMousePosition);
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
     };
   }, []);
-
   const scrollToFeatures = () => {
     const featuresSection = document.getElementById('features-section');
     if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
+      featuresSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
   const scrollToDemo = () => {
     const demoSection = document.getElementById('demo-section');
     if (demoSection) {
-      demoSection.scrollIntoView({ behavior: 'smooth' });
+      demoSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
 
   // Placeholder images - these will be replaced with your uploaded images
-  const mobileImages = [
-    {
-      src: "/lovable-uploads/36e1cb40-c662-4f71-b6de-5d764404f504.png",
-      title: "Profile Management",
-      description: "Mobile-optimized profile management interface"
-    },
-    {
-      src: "/lovable-uploads/b3f03c08-8343-4600-8bb8-c11b5543f234.png",
-      title: "Menu Management", 
-      description: "Touch-friendly menu editing on mobile"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "Settings",
-      description: "Mobile settings panel"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "Analytics",
-      description: "Mobile dashboard analytics"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "QR Generator",
-      description: "Generate QR codes on mobile"
-    }
-  ];
-
-  const desktopImages = [
-    {
-      src: "/placeholder.svg",
-      title: "Profile Management",
-      description: "Comprehensive desktop profile management"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "Menu Management",
-      description: "Full-featured desktop menu editor"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "Dashboard Overview",
-      description: "Complete desktop dashboard"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "Translation Manager",
-      description: "Multi-language management system"
-    },
-    {
-      src: "/placeholder.svg",
-      title: "Analytics Suite",
-      description: "Advanced desktop analytics"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-white relative overflow-hidden">
+  const mobileImages = [{
+    src: "/lovable-uploads/36e1cb40-c662-4f71-b6de-5d764404f504.png",
+    title: "Profile Management",
+    description: "Mobile-optimized profile management interface"
+  }, {
+    src: "/lovable-uploads/b3f03c08-8343-4600-8bb8-c11b5543f234.png",
+    title: "Menu Management",
+    description: "Touch-friendly menu editing on mobile"
+  }, {
+    src: "/placeholder.svg",
+    title: "Settings",
+    description: "Mobile settings panel"
+  }, {
+    src: "/placeholder.svg",
+    title: "Analytics",
+    description: "Mobile dashboard analytics"
+  }, {
+    src: "/placeholder.svg",
+    title: "QR Generator",
+    description: "Generate QR codes on mobile"
+  }];
+  const desktopImages = [{
+    src: "/placeholder.svg",
+    title: "Profile Management",
+    description: "Comprehensive desktop profile management"
+  }, {
+    src: "/placeholder.svg",
+    title: "Menu Management",
+    description: "Full-featured desktop menu editor"
+  }, {
+    src: "/placeholder.svg",
+    title: "Dashboard Overview",
+    description: "Complete desktop dashboard"
+  }, {
+    src: "/placeholder.svg",
+    title: "Translation Manager",
+    description: "Multi-language management system"
+  }, {
+    src: "/placeholder.svg",
+    title: "Analytics Suite",
+    description: "Advanced desktop analytics"
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-white relative overflow-hidden">
       {/* Modern Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-40 w-80 h-80 bg-cyan-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-40 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-40 right-40 w-80 h-80 bg-cyan-400/5 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute bottom-20 left-40 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '2s'
+      }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-blue-500/3 via-transparent to-cyan-400/3 rotate-45"></div>
       </div>
 
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          ></div>
-        ))}
+        {[...Array(15)].map((_, i) => <div key={i} className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse" style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: `${Math.random() * 3}s`,
+        animationDuration: `${2 + Math.random() * 3}s`
+      }}></div>)}
       </div>
 
       {/* Mouse Follower Effect */}
-      <div
-        className="fixed pointer-events-none z-0 w-96 h-96 bg-gradient-radial from-blue-400/3 to-transparent rounded-full blur-3xl transition-all duration-300"
-        style={{
-          left: mousePosition.x - 192,
-          top: mousePosition.y - 192,
-        }}
-      ></div>
+      <div className="fixed pointer-events-none z-0 w-96 h-96 bg-gradient-radial from-blue-400/3 to-transparent rounded-full blur-3xl transition-all duration-300" style={{
+      left: mousePosition.x - 192,
+      top: mousePosition.y - 192
+    }}></div>
 
       {/* Navigation */}
       <nav className="relative z-10 bg-white/90 backdrop-blur-md border-b border-blue-100/50 shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" 
-                alt="Click Code Logo" 
-                className="w-10 h-10 object-contain"
-              />
+              <img src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" alt="Click Code Logo" className="w-10 h-10 object-contain" />
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Click Code</span>
             </div>
             <div className="flex items-center space-x-4 md:space-x-6">
@@ -159,17 +140,13 @@ const Index = () => {
             {/* Animated Logo */}
             <div className="mb-8 relative">
               <div className="w-24 h-24 mx-auto bg-white rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/25 animate-bounce p-4">
-                <img 
-                  src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" 
-                  alt="Click Code Logo" 
-                  className="w-full h-full object-contain animate-pulse"
-                />
+                <img src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" alt="Click Code Logo" className="w-full h-full object-contain animate-pulse" />
               </div>
               <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl blur-xl opacity-30 animate-ping"></div>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-slate-800 mb-6 leading-tight">
+            <h1 className="md:text-6xl lg:text-8xl font-bold text-slate-800 mb-6 leading-tight text-2xl">
               Restaurant{' '}
               <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-pulse bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]">
                 Management
@@ -177,10 +154,7 @@ const Index = () => {
               <br />Made Simple
             </h1>
 
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of restaurant management with our comprehensive admin panel. 
-              Manage menus, translations, currencies, and more from any device with our responsive design.
-            </p>
+            
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 px-4">
@@ -282,10 +256,7 @@ const Index = () => {
             </p>
           </div>
 
-          <ImageCarousel 
-            mobileImages={mobileImages}
-            desktopImages={desktopImages}
-          />
+          <ImageCarousel mobileImages={mobileImages} desktopImages={desktopImages} />
         </div>
       </section>
 
@@ -294,11 +265,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img 
-                src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" 
-                alt="Click Code Logo" 
-                className="w-10 h-10 object-contain"
-              />
+              <img src="/lovable-uploads/47736fb9-9e34-42c1-8aad-be2772515362.png" alt="Click Code Logo" className="w-10 h-10 object-contain" />
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Click Code</span>
             </div>
             <p className="text-slate-600 text-center md:text-right">
@@ -307,8 +274,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
