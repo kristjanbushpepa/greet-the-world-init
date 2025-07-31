@@ -260,6 +260,123 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Restaurant Testimonials Section */}
+      <section className="relative z-10 py-20 bg-gradient-to-br from-blue-50/50 via-white/50 to-cyan-50/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+              Trusted by Leading Restaurants
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Discover how top restaurants are transforming their digital presence and boosting customer engagement
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Oliveta Restaurant */}
+            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <img 
+                    src="/lovable-uploads/55ee0c88-6f17-4014-b17f-0a98a9315f48.png" 
+                    alt="Oliveta Restaurant logo"
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100"
+                  />
+                  <div>
+                    <h3 className="font-bold text-xl text-slate-800">Oliveta Restaurant</h3>
+                    <p className="text-slate-600 text-sm">Greek Modern Cuisine</p>
+                  </div>
+                </div>
+                
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+                
+                <blockquote className="text-slate-600 italic leading-relaxed">
+                  "Our partnership with this platform has transformed how we present our authentic Greek dishes. The beautiful menu design perfectly captures the essence of our modern cuisine, and our customers love the seamless digital experience."
+                </blockquote>
+              </CardContent>
+            </Card>
+
+            {/* Iumentis Steakhouse */}
+            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <img 
+                    src="/lovable-uploads/80ee67c9-bb51-4df6-a2e5-aee683f09915.png" 
+                    alt="Iumentis Steakhouse logo"
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100"
+                  />
+                  <div>
+                    <h3 className="font-bold text-xl text-slate-800">Iumentis Steakhouse</h3>
+                    <p className="text-slate-600 text-sm">Premium Steakhouse</p>
+                  </div>
+                </div>
+                
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+                
+                <blockquote className="text-slate-600 italic leading-relaxed">
+                  "The sophisticated menu presentation has elevated our steakhouse brand. Our premium cuts and wine selection are now showcased beautifully, resulting in a 40% increase in online orders and improved customer engagement."
+                </blockquote>
+              </CardContent>
+            </Card>
+
+            {/* Omoi Restaurant */}
+            <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <img 
+                    src="/lovable-uploads/fba8d78e-2101-4df7-8e0b-f207f3964add.png" 
+                    alt="Omoi Restaurant logo"
+                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100"
+                  />
+                  <div>
+                    <h3 className="font-bold text-xl text-slate-800">Omoi Restaurant</h3>
+                    <p className="text-slate-600 text-sm">Contemporary Dining</p>
+                  </div>
+                </div>
+                
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+                
+                <blockquote className="text-slate-600 italic leading-relaxed">
+                  "The elegant design system perfectly matches our restaurant's aesthetic. Our guests appreciate the intuitive menu navigation and the seamless ordering experience. It's been a game-changer for our business."
+                </blockquote>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-16">
+            <Card className="bg-white/60 backdrop-blur-md border border-blue-100/50 max-w-2xl mx-auto">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4 text-slate-800">Join These Success Stories</h3>
+                <p className="text-slate-600 mb-6">
+                  Transform your restaurant's digital presence with our beautiful, modern menu solutions
+                </p>
+                <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg px-8 py-3 text-lg font-semibold">
+                  Get Started Today
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="relative z-10 bg-white/90 backdrop-blur-md border-t border-blue-100 py-12">
         <div className="container mx-auto px-6">
