@@ -1,22 +1,23 @@
-# Welcome to your Lovable project
 
-## Project info
+# Welcome to your ClickCode project
 
-**URL**: https://lovable.dev/projects/43f32b33-74f1-43ce-9de5-24c180fd9166
+## Project info Albania
+
+**URL**: https://lovable.dev/projects/d68d6feb-97b1-4947-a9c1-94cf489226b0
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use ClickCode**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/43f32b33-74f1-43ce-9de5-24c180fd9166) and start prompting.
+Simply visit the [ClickCode Project](https://lovable.dev/projects/d68d6feb-97b1-4947-a9c1-94cf489226b0) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via ClickCode will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in ClickCode.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,9 +63,9 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/43f32b33-74f1-43ce-9de5-24c180fd9166) and click on Share -> Publish.
+Simply open [ClickCode](https://lovable.dev/projects/d68d6feb-97b1-4947-a9c1-94cf489226b0) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my ClickCode project?
 
 Yes, you can!
 
