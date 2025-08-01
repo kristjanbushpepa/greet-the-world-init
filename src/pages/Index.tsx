@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, Zap, Shield, Cpu, Sparkles, ChevronDown, Monitor, Smartphone, Settings, BarChart3 } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Cpu, Sparkles, ChevronDown, Monitor, Smartphone, Settings, BarChart3, Menu, X } from 'lucide-react';
 import { ImageCarousel } from '@/components/ImageCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,6 +14,7 @@ const Index = () => {
     x: 0,
     y: 0
   });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
     const updateMousePosition = (ev: MouseEvent) => {
       setMousePosition({
@@ -123,9 +124,9 @@ const Index = () => {
               
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Click Code</span>
             </div>
-            <div className="flex items-center space-x-4 md:space-x-6">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6">
               <LanguageSwitch />
-              
               <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50" onClick={() => window.location.href = '/restaurant/login'}>
                 {t('hero.restaurant_login')}
               </Button>
@@ -133,7 +134,34 @@ const Index = () => {
                 {t('nav.contact')}
               </Button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
           </div>
+
+          {/* Mobile Menu Dropdown */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-blue-100/50">
+              <div className="flex flex-col space-y-3 pt-4">
+                <LanguageSwitch />
+                <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 justify-start" onClick={() => window.location.href = '/restaurant/login'}>
+                  {t('hero.restaurant_login')}
+                </Button>
+                <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg justify-start" onClick={() => window.location.href = '/contact'}>
+                  {t('nav.contact')}
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
