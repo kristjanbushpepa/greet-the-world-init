@@ -4,7 +4,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Zap, Shield, Cpu, Sparkles, ChevronDown, Monitor, Smartphone, Settings, BarChart3 } from 'lucide-react';
 import { ImageCarousel } from '@/components/ImageCarousel';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitch from '@/components/LanguageSwitch';
 const Index = () => {
+  const { t } = useLanguage();
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
@@ -119,14 +122,15 @@ const Index = () => {
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Click Code</span>
             </div>
             <div className="flex items-center space-x-4 md:space-x-6">
+              <LanguageSwitch />
               <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 hidden md:block" onClick={scrollToFeatures}>
-                Features
+                {t('nav.features')}
               </Button>
               <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50" onClick={() => window.location.href = '/restaurant/login'}>
-                Login
+                {t('hero.restaurant_login')}
               </Button>
               <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg" onClick={() => window.location.href = '/contact'}>
-                Sign Up
+                {t('nav.contact')}
               </Button>
             </div>
           </div>
@@ -147,29 +151,31 @@ const Index = () => {
 
             {/* Main Heading */}
             <h1 className="md:text-6xl lg:text-8xl font-bold text-slate-800 mb-6 leading-tight text-2xl">
-              Restaurant{' '}
+              {t('hero.welcome')}{' '}
+              <br />
               <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-pulse bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]">
-                Management
-              </span>{' '}
-              <br />Made Simple
+                {t('hero.title')}
+              </span>
             </h1>
 
-            
+            <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+              {t('hero.description')}
+            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 px-4">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-xl px-6 md:px-8 py-4 text-lg font-semibold group" onClick={() => window.location.href = '/restaurant/login'}>
-                Login
+                {t('hero.restaurant_login')}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="border-blue-200 text-blue-700 hover:bg-blue-50 backdrop-blur-sm px-6 md:px-8 py-4 text-lg" onClick={() => window.location.href = '/contact'}>
-                Contact Us
+                {t('nav.contact')}
               </Button>
             </div>
 
             {/* Scroll Indicator */}
             <div className="flex flex-col items-center animate-bounce cursor-pointer" onClick={scrollToFeatures}>
-              <span className="text-slate-500 text-sm mb-2">Discover Features</span>
+              <span className="text-slate-500 text-sm mb-2">{t('hero.explore_features')}</span>
               <ChevronDown className="h-6 w-6 text-slate-500" />
             </div>
           </div>
@@ -181,10 +187,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-              Powerful Admin Features
+              {t('features.title')}
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Everything you need to manage your restaurant efficiently
+              {t('features.subtitle')}
             </p>
           </div>
 
@@ -249,10 +255,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-              See It In Action
+              {t('demo.title')}
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Experience our responsive admin panel on both mobile and desktop
+              {t('demo.subtitle')}
             </p>
           </div>
 
@@ -265,10 +271,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-              Trusted by Leading Restaurants
+              {t('testimonials.title')}
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Discover how top restaurants are transforming their digital presence and boosting customer engagement
+              {t('testimonials.subtitle')}
             </p>
           </div>
 
@@ -297,11 +303,11 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-slate-600 italic leading-relaxed mb-6">
-                  "Our partnership with this platform has transformed how we present our authentic Greek dishes. The beautiful menu design perfectly captures the essence of our modern cuisine, and our customers love the seamless digital experience."
+                  {t('testimonials.oliveta')}
                 </blockquote>
                 
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg group-hover:scale-105 transition-transform">
-                  View Menu <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('testimonials.view_menu')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
@@ -330,7 +336,7 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-slate-600 italic leading-relaxed">
-                  "The sophisticated menu presentation has elevated our steakhouse brand. Our premium cuts and wine selection are now showcased beautifully, resulting in a 40% increase in online orders and improved customer engagement."
+                  {t('testimonials.iumentis')}
                 </blockquote>
               </CardContent>
             </Card>
@@ -359,7 +365,7 @@ const Index = () => {
                 </div>
                 
                 <blockquote className="text-slate-600 italic leading-relaxed">
-                  "The elegant design system perfectly matches our restaurant's aesthetic. Our guests appreciate the intuitive menu navigation and the seamless ordering experience. It's been a game-changer for our business."
+                  {t('testimonials.omoi')}
                 </blockquote>
               </CardContent>
             </Card>
@@ -368,12 +374,12 @@ const Index = () => {
           <div className="text-center mt-16">
             <Card className="bg-white/60 backdrop-blur-md border border-blue-100/50 max-w-2xl mx-auto">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-slate-800">Join These Success Stories</h3>
+                <h3 className="text-2xl font-bold mb-4 text-slate-800">{t('cta.title')}</h3>
                 <p className="text-slate-600 mb-6">
-                  Transform your restaurant's digital presence with our beautiful, modern menu solutions
+                  {t('cta.subtitle')}
                 </p>
                 <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white border-0 shadow-lg px-8 py-3 text-lg font-semibold">
-                  Get Started Today
+                  {t('cta.get_started')}
                 </Button>
               </CardContent>
             </Card>
