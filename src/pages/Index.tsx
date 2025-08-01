@@ -7,7 +7,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitch from '@/components/LanguageSwitch';
 const Index = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
@@ -123,9 +125,7 @@ const Index = () => {
             </div>
             <div className="flex items-center space-x-4 md:space-x-6">
               <LanguageSwitch />
-              <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 hidden md:block" onClick={scrollToFeatures}>
-                {t('nav.features')}
-              </Button>
+              
               <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50" onClick={() => window.location.href = '/restaurant/login'}>
                 {t('hero.restaurant_login')}
               </Button>
@@ -283,11 +283,7 @@ const Index = () => {
             <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-pointer" onClick={() => window.location.href = '/menu/oliveta'}>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <img 
-                    src="/lovable-uploads/55ee0c88-6f17-4014-b17f-0a98a9315f48.png" 
-                    alt="Oliveta Restaurant logo"
-                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100"
-                  />
+                  <img src="/lovable-uploads/55ee0c88-6f17-4014-b17f-0a98a9315f48.png" alt="Oliveta Restaurant logo" className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100" />
                   <div>
                     <h3 className="font-bold text-xl text-slate-800">Oliveta Restaurant</h3>
                     <p className="text-slate-600 text-sm">Greek Modern Cuisine</p>
@@ -295,11 +291,9 @@ const Index = () => {
                 </div>
                 
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                    </svg>
-                  ))}
+                  {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>)}
                 </div>
                 
                 <blockquote className="text-slate-600 italic leading-relaxed mb-6">
@@ -316,11 +310,7 @@ const Index = () => {
             <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <img 
-                    src="/lovable-uploads/80ee67c9-bb51-4df6-a2e5-aee683f09915.png" 
-                    alt="Iumentis Steakhouse logo"
-                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100"
-                  />
+                  <img src="/lovable-uploads/80ee67c9-bb51-4df6-a2e5-aee683f09915.png" alt="Iumentis Steakhouse logo" className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100" />
                   <div>
                     <h3 className="font-bold text-xl text-slate-800">Iumentis Steakhouse</h3>
                     <p className="text-slate-600 text-sm">Premium Steakhouse</p>
@@ -328,11 +318,9 @@ const Index = () => {
                 </div>
                 
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                    </svg>
-                  ))}
+                  {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>)}
                 </div>
                 
                 <blockquote className="text-slate-600 italic leading-relaxed">
@@ -345,11 +333,7 @@ const Index = () => {
             <Card className="bg-white/80 backdrop-blur-md border border-blue-100/50 hover:bg-white/90 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <img 
-                    src="/lovable-uploads/fba8d78e-2101-4df7-8e0b-f207f3964add.png" 
-                    alt="Omoi Restaurant logo"
-                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100"
-                  />
+                  <img src="/lovable-uploads/fba8d78e-2101-4df7-8e0b-f207f3964add.png" alt="Omoi Restaurant logo" className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg ring-2 ring-blue-100" />
                   <div>
                     <h3 className="font-bold text-xl text-slate-800">Omoi Restaurant</h3>
                     <p className="text-slate-600 text-sm">Contemporary Dining</p>
@@ -357,11 +341,9 @@ const Index = () => {
                 </div>
                 
                 <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                    </svg>
-                  ))}
+                  {[...Array(5)].map((_, i) => <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>)}
                 </div>
                 
                 <blockquote className="text-slate-600 italic leading-relaxed">
