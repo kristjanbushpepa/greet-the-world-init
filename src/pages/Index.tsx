@@ -123,7 +123,7 @@ const Index = () => {
               
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Click Code</span>
             </div>
-            <div className="flex items-center space-x-2 md:space-x-6">
+            <div className="flex items-center space-x-4 md:space-x-6">
               <LanguageSwitch />
               
               <Button variant="ghost" className="text-slate-700 hover:text-blue-600 hover:bg-blue-50" onClick={() => window.location.href = '/restaurant/login'}>
@@ -158,9 +158,7 @@ const Index = () => {
               </span>
             </h1>
 
-            <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              {t('hero.description')}
-            </p>
+            
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 px-4">
